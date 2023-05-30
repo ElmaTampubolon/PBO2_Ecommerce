@@ -1,7 +1,5 @@
 package org.example;
 
-package org.example;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -79,4 +77,11 @@ public class Table {
         }
     }
 
+    /**
+     * @param args the command Line arguments
+     */
+    public static void main(String[] args) {
+        createNewTable();
+    }
+}
 
