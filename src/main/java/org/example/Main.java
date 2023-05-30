@@ -21,4 +21,9 @@ public class Main {
                 httpServer.setExecutor(Executors.newSingleThreadExecutor());
                 httpServer.start();
             }
+            public static class ecommerceHandler implements HttpHandler {
+                @Override
+                public void handle(HttpExchange exchange) throws IOException {
+                    //post
+                    //get
     }
