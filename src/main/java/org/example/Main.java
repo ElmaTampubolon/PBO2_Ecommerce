@@ -12,4 +12,13 @@ package org.example;
 public class Main {
     public static void main (String[] args) throws IOException
     {
+        public class Main {
+            public static void main (String[] args) throws IOException
+            {
+                HttpServer httpServer = HttpServer.create(new InetSocketAddress("Localhost", 8074), 0);
 
+                httpServer.createContext("/ecommerce", new ecommerceHandler());
+                httpServer.setExecutor(Executors.newSingleThreadExecutor());
+                httpServer.start();
+            }
+    }
