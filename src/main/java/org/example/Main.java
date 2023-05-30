@@ -26,4 +26,17 @@ public class Main {
                 public void handle(HttpExchange exchange) throws IOException {
                     //post
                     //get
+
+                    if("GET".equals(exchange.getRequestMethod())){
+                        OutputStream outputStream = exchange.getResponseBody();
+                        String tes = "Elma";
+                        exchange.sendResponseHeaders(200, tes.length());
+                        outputStream.write(tes.getBytes());
+                        outputStream.flush();
+                        outputStream.close();
+                    }
+                }
+            }
+        }
+
     }
