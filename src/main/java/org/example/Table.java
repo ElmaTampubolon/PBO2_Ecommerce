@@ -65,4 +65,18 @@ public class Table {
                 + " price INTEGER NOT NULL\n"
                 + ");";
 
+        try {
+            Connection conn = DriverManager.getConnection(url);
+            Statement stmt = conn.createStatement();
+            stmt.execute(sql1); //SQL table "addresses"
+            stmt.execute(sql2); //SQL table "users"
+            stmt.execute(sql3); //SQL table "reviews"
+            stmt.execute(sql4); //SQL table "products"
+            stmt.execute(sql5); //SQL table "orders"
+            stmt.execute(sql6); //SQL table "OrderDetails"
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 
